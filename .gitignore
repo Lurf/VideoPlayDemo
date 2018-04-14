@@ -1,0 +1,4 @@
+GoogleService-Info.plist
+*.swp
+!.gitkeep
+.DS_Store

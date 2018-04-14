@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" rowHeight="296" id="dEx-P0-m9L" customClass="VideoCell" customModule="VideoPlayDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="296"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dEx-P0-m9L" id="OfP-U5-iUS">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="295.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwC-2c-Jct" customClass="AVPlayerView" customModule="VideoPlayDemo" customModuleProvider="target">
+                        <rect key="frame" x="36" y="11" width="303" height="240"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="240" id="1RO-uA-BRI"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RH0-n9-Sbd">
+                        <rect key="frame" x="36" y="259" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="jxl-bH-hWu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="RH0-n9-Sbd" firstAttribute="leading" secondItem="OfP-U5-iUS" secondAttribute="leadingMargin" constant="20" id="1Nt-yJ-SFs"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="nwC-2c-Jct" secondAttribute="trailing" constant="20" id="3v4-dy-BwW"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="RH0-n9-Sbd" secondAttribute="bottom" constant="5" id="Cdc-NW-mgJ"/>
+                    <constraint firstItem="nwC-2c-Jct" firstAttribute="leading" secondItem="OfP-U5-iUS" secondAttribute="leadingMargin" constant="20" id="JsQ-ob-z5Y"/>
+                    <constraint firstItem="RH0-n9-Sbd" firstAttribute="top" secondItem="nwC-2c-Jct" secondAttribute="bottom" constant="8" id="Ryc-cR-0UB"/>
+                    <constraint firstItem="nwC-2c-Jct" firstAttribute="top" secondItem="OfP-U5-iUS" secondAttribute="topMargin" id="kUq-e8-PTU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="playerView" destination="nwC-2c-Jct" id="C3R-L7-NG5"/>
+            </connections>
+            <point key="canvasLocation" x="-77.5" y="-20"/>
+        </tableViewCell>
+    </objects>
+</document>

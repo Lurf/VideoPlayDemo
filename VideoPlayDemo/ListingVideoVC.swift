@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  ListingVideoVC.swift
 //  VideoPlayDemo
 //
 //  Created by Lurf on 2018/04/13.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class SecondViewController: UITableViewController {
+class ListingVideoVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "VideoCell", bundle: .main), forCellReuseIdentifier: "VideoCell")
+        tableView.register(UINib(nibName: VideoCell.className(), bundle: .main), forCellReuseIdentifier: VideoCell.className())
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +35,7 @@ class SecondViewController: UITableViewController {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as? VideoCell {
             
             
-            let urlString = "video.url"
+            let urlString = "firebase storage url"
             
             guard let url = URL(string: urlString) else {
                 return cell

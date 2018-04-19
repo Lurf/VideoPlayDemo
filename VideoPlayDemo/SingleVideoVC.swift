@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SingleVideoVC.swift
 //  VideoPlayDemo
 //
 //  Created by Lurf on 2018/04/13.
@@ -9,7 +9,8 @@
 import UIKit
 import AVKit
 
-class FirstViewController: UIViewController {
+
+class SingleVideoVC: UIViewController {
     @IBOutlet weak var playerView: AVPlayerView!
     
     var isPlayed = false
@@ -17,7 +18,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let urlString = "video url"
+        let urlString = "firebase storage url"
         
         guard let url = URL(string: urlString) else {
             print("url is undefined.")
@@ -36,6 +37,7 @@ class FirstViewController: UIViewController {
         guard let player = playerView.player() else {
             return
         }
+        
         if isPlayed {
             player.pause()
             isPlayed = false
